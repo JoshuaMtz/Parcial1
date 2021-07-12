@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+
+
+<script>
+
+let nombres  = ['Jorge','Isabel','Juan','Pedro','Karina','Jose','Arturo','Rogelio','Bertha'];
+
+
+/*
+
+Funciones 1 -  Crea una funcion llamada "mayusculas" que:
+- reciba como argumento el arreglo "nombres" y convierta todos los nombres a mayusula.
+- Los debe escribir en la consola convertidos.
+*/
+
+// CREA TU FUNCION MAYUSCULAS aqui:
+function mayusculas(nombres){
+    for(var i=0;i<nombres.length;i++)
+    {
+        var x = nombres[i].toUpperCase();
+        console.log(x);
+    }
+    
+}
+
+
+
+/*
+Funciones 2 -  Crea una funcion llamada "calculateDogAge" que: 
+
+- reciba como argumento le edad del perro.
+- realice el cálculo de la edad en base a la conversión 1 año humano = 7 años perro.  
+- Deberá escribir en consola "Tu perro tiene NN años perro"
+- EJ:   calculateDogAge(2)  -> "Tu pero tiene 14 años perro"
+
+*/
+
+// CREA TU FUNCION calculateDogAge aqui:
+function calculateDogAge(age){
+    var resultado;
+    resultado = age*7;
+    console.log(`Tu perro tiene ${resultado} años perro`);
+}
+
+/*
+
+### Funciones 3 - Crea 2 funciones. Una llamada celsiusToFahrenheit que:
+
+- reciba un número y lo convierta de celsius a Fahrenheit , posteriormente que escriba el resultado en consola.
+
+y otra llamada fahrenheitToCelsius que:
+
+- reciba un número y lo convierta de Fahrenheit a Celsius ,  posteriormente que escriba el resultado en consola.
+
+La conversion deberá ser un numero entero para ambas (sin decimales)
+
+EJ:  
+
+
+celsiusToFahrenheit(35)  --> 95
+
+fahrenheitToCelsius(95) --> 35
+
+*/
+
+// CREA TUS FUNCIONES  aqui:
+function celsiusToFahrenheit(num){
+    var resultado;
+    resultado = parseInt((num*1.8)+32);
+    console.log(`${num}°C equivalen a ${resultado}°F`)
+
+}
+function fahrenheitToCelsius(num){
+    var resultado;
+    resultado = parseInt((num-32)*(5/9));
+    console.log(`${num}°F equivalen a ${resultado}°C`)
+}
+
+
+/*  OBJETOS 
+
+A) Define un objeto tipo "Perro" que reciba 3 parametros
+
+1) Nombre
+2) Color
+3) Raza
+
+
+B) Crea 3 objectos  con diferentes valores.
+
+C) Con un console.log escribe el nombre del primer objeto, el color del segundo, y la raza del tercero. Lo puedes hacer en una sola línea o en 3 lineas aparte. 
+
+
+*/
+function Perro(nombre,color,raza)
+{
+  this.nombre = nombre;
+  this.color = color;
+  this.raza = raza;
+}
+
+var perro1 = new Perro('Odi','Blanco','Schnauzer');
+var perro2 = new Perro('Yuky','Blanco con negro','Akita americano');
+var perro3 = new Perro('Jake','Negro','Labrador');
+
+/***
+ * 
+ *        PRUEBA TUS FUNCIONES
+ * 
+ ***/
+
+
+mayusculas(nombres);
+calculateDogAge(4);
+celsiusToFahrenheit(35)
+fahrenheitToCelsius(95)
+
+
+
+
+
+/***
+ * 
+ *        PRUEBA TUS OBJETOS AQUI
+ * 
+ ***/
+
+console.log("Nombre primer perro: " + perro1.nombre)
+console.log("Color del segundo perro: " + perro2.color)
+console.log("Raza del tercer perro: " + perro3.raza)
+</script>
+
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>
