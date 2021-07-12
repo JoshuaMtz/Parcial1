@@ -19,7 +19,14 @@ Funciones 1 -  Crea una funcion llamada "mayusculas" que:
 */
 
 // CREA TU FUNCION MAYUSCULAS aqui:
-
+function mayusculas(nombres){
+    for(var i=0;i<nombres.length;i++)
+    {
+        var x = nombres[i].toUpperCase();
+        console.log(x);
+    }
+    
+}
 
 
 
@@ -34,10 +41,11 @@ Funciones 2 -  Crea una funcion llamada "calculateDogAge" que:
 */
 
 // CREA TU FUNCION calculateDogAge aqui:
-
-
-
-
+function calculateDogAge(age){
+    var resultado;
+    resultado = age*7;
+    console.log(`Tu perro tiene ${resultado} años perro`);
+}
 
 /*
 
@@ -60,14 +68,18 @@ fahrenheitToCelsius(95) --> 35
 
 */
 
-
-
-
 // CREA TUS FUNCIONES  aqui:
+function celsiusToFahrenheit(num){
+    var resultado;
+    resultado = parseInt((num*1.8)+32);
+    console.log(`${num}°C equivalen a ${resultado}°F`)
 
-
-
-
+}
+function fahrenheitToCelsius(num){
+    var resultado;
+    resultado = parseInt((num-32)*(5/9));
+    console.log(`${num}°F equivalen a ${resultado}°C`)
+}
 
 
 /*  OBJETOS 
@@ -85,8 +97,16 @@ C) Con un console.log escribe el nombre del primer objeto, el color del segundo,
 
 
 */
+function Perro(nombre,color,raza)
+{
+  this.nombre = nombre;
+  this.color = color;
+  this.raza = raza;
+}
 
-
+var perro1 = new Perro('Odi','Blanco','Schnauzer');
+var perro2 = new Perro('Yuky','Blanco con negro','Akita americano');
+var perro3 = new Perro('Jake','Negro','Labrador');
 
 /***
  * 
@@ -110,7 +130,9 @@ fahrenheitToCelsius(95)
  * 
  ***/
 
-
+console.log("Nombre primer perro: " + perro1.nombre)
+console.log("Color del segundo perro: " + perro2.color)
+console.log("Raza del tercer perro: " + perro3.raza)
 </script>
 
 </head>
